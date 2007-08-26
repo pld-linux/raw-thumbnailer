@@ -3,15 +3,17 @@ Summary(pl.UTF-8):	Lekki program do wykonywania miniaturek dla zdjęć w formaci
 Name:		raw-thumbnailer
 Version:	0.1
 Release:	0.1
-License:	GPL v2
-Group:		Applications
+License:	LGPL v2.1+
+Group:		Applications/Graphics
 Source0:	http://raw-thumbnailer.googlecode.com/files/%{name}-%{version}.tar.gz
 # Source0-md5:	f6980ceb4cf80104cc3912a6711544f6
 URL:		http://code.google.com/p/raw-thumbnailer/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel
+BuildRequires:	gtk+2-devel >= 1:2.0
 BuildRequires:	libopenraw-devel
+BuildRequires:	libstdc++-devel
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,12 +28,12 @@ Thunar-thumbnailers.
 
 %description -l pl.UTF-8
 Ten prosty program generuje miniaturki cyfrowych zdjęć w formacie
-raw używając biblioteki libopenraw i GDK. Wspiera te same formaty co
-libopenraw.
+raw przy użyciu bibliotek libopenraw i GDK. Obsługuje te same formaty
+co libopenraw.
 
 Ten generator miniaturek zaprojektowano by był mały, lekki i szybki.
 Jest głównie przeznaczony do użytku z menadżerami plików
-(aczkolwiek równie dobrze możę być użyty przez program
+(aczkolwiek równie dobrze może być użyty przez program do
 zarządzania fotografiami) i jest używany przez Thunar-thumbnailers.
 
 %prep
@@ -55,5 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS ChangeLog
 %attr(755,root,root) %{_bindir}/raw-thumbnailer
