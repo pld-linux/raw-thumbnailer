@@ -1,19 +1,21 @@
 Summary:	Lightweight raw image thumbnailer
 Summary(pl.UTF-8):	Lekki program do wykonywania miniaturek dla zdjęć w formacie raw
 Name:		raw-thumbnailer
-Version:	0.2
-Release:	0.1
+Version:	0.2.1
+Release:	1
 License:	LGPL v2.1+
 Group:		Applications/Graphics
+#Source0Download: http://code.google.com/p/raw-thumbnailer/downloads/list
 Source0:	http://raw-thumbnailer.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	f107575aa32a0d53802cf5beead18bf8
+# Source0-md5:	a39282120d8f754e9f6adb768d65b72a
 URL:		http://code.google.com/p/raw-thumbnailer/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 1:2.0
+BuildRequires:	gdk-pixbuf2-devel >= 2.0
 BuildRequires:	libopenraw-gnome-devel >= 0.0.4
 BuildRequires:	libstdc++-devel
 BuildRequires:	pkgconfig
+Requires:	libopenraw-gnome >= 0.0.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
