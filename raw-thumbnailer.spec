@@ -1,8 +1,9 @@
+# NOTE: some old project, replaced by libopenraw-thumbnailer.spec
 Summary:	Lightweight raw image thumbnailer
 Summary(pl.UTF-8):	Lekki program do wykonywania miniaturek dla zdjęć w formacie raw
 Name:		raw-thumbnailer
 Version:	0.2.1
-Release:	1
+Release:	1.1
 License:	LGPL v2.1+
 Group:		Applications/Graphics
 #Source0Download: http://code.google.com/p/raw-thumbnailer/downloads/list
